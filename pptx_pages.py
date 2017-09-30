@@ -6,6 +6,10 @@ import shutil
 
 def main():
     args=sys.argv
+    if len(args) < 2:
+        print("please input pptx file..")
+        sys.exit(1)
+    
     dir_path=tempfile.mkdtemp(dir="./")
     pptx_file=os.path.join(args[1])
     
